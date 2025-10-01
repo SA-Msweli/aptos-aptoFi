@@ -1,0 +1,63 @@
+{
+  "name": "aptofi",
+  "version": "1.0.0",
+  "description": "AptoFi - Advanced DeFi Platform on Aptos with Chainlink CCIP Integration",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "scripts\\deploy.bat",
+    "deploy:unix": "bash scripts/deploy.sh",
+    "test": "node scripts/test.js",
+    "test:lint": "node scripts/test.js --lint",
+    "test:coverage": "node scripts/test.js --coverage",
+    "setup": "npm install && cd mobile && npm install",
+    "mobile:start": "cd mobile && npm start",
+    "mobile:android": "cd mobile && npm run android",
+    "mobile:ios": "cd mobile && npm run ios",
+    "mobile:build:android": "cd mobile && npm run build:android",
+    "mobile:build:ios": "cd mobile && npm run build:ios",
+    "contracts:compile": "cd contracts && aptos move compile",
+    "contracts:test": "cd contracts && aptos move test",
+    "contracts:publish": "cd contracts && aptos move publish",
+    "contracts:init": "cd contracts && aptos init",
+    "docs:generate": "echo 'Documentation available in README.md and DEPLOYMENT_INSTRUCTIONS.md'",
+    "security:audit": "echo 'Run: aptos move test for contract security tests'",
+    "clean": "rm -rf node_modules mobile/node_modules coverage test-results.json deployment.json",
+    "postinstall": "echo 'AptoFi setup complete! Run npm run setup to install all dependencies.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/aptofi.git"
+  },
+  "keywords": [
+    "aptos",
+    "defi",
+    "blockchain",
+    "chainlink",
+    "ccip",
+    "lending",
+    "yield-farming",
+    "amm",
+    "mobile",
+    "react-native"
+  ],
+  "author": "AptoFi Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "eslint": "^8.47.0",
+    "prettier": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/aptofi"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/aptofi/issues"
+  },
+  "homepage": "https://aptofi.com"
+}
