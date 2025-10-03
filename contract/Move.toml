@@ -1,0 +1,18 @@
+# Move Package Configuration for AptoFi - Simple Version
+
+[package]
+name = "AptoFi"
+version = "1.0.0"
+
+[addresses]
+aptofi = "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-stdlib"

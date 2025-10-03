@@ -1,63 +1,85 @@
 {
   "name": "aptofi",
   "version": "1.0.0",
-  "description": "AptoFi - Advanced DeFi Platform on Aptos with Chainlink CCIP Integration",
-  "main": "index.js",
+  "description": "Multi-platform DeFi Banking application built on Aptos blockchain",
+  "private": true,
   "scripts": {
-    "deploy": "scripts\\deploy.bat",
-    "deploy:unix": "bash scripts/deploy.sh",
-    "test": "node scripts/test.js",
-    "test:lint": "node scripts/test.js --lint",
-    "test:coverage": "node scripts/test.js --coverage",
-    "setup": "npm install && cd mobile && npm install",
-    "mobile:start": "cd mobile && npm start",
-    "mobile:android": "cd mobile && npm run android",
-    "mobile:ios": "cd mobile && npm run ios",
-    "mobile:build:android": "cd mobile && npm run build:android",
-    "mobile:build:ios": "cd mobile && npm run build:ios",
-    "contracts:compile": "cd contracts && aptos move compile",
-    "contracts:test": "cd contracts && aptos move test",
-    "contracts:publish": "cd contracts && aptos move publish",
-    "contracts:init": "cd contracts && aptos init",
-    "docs:generate": "echo 'Documentation available in README.md and DEPLOYMENT_INSTRUCTIONS.md'",
-    "security:audit": "echo 'Run: aptos move test for contract security tests'",
-    "clean": "rm -rf node_modules mobile/node_modules coverage test-results.json deployment.json",
-    "postinstall": "echo 'AptoFi setup complete! Run npm run setup to install all dependencies.'"
+    "dev": "next dev",
+    "build": "npm run build:prepare && next build && npm run build:deploy",
+    "build:prepare": "node scripts/prepare-build.js",
+    "build:deploy": "node scripts/copy-deployment-files.js",
+    "build:clean": "rimraf .next out public/deployment public/config",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "move:compile": "cd contract && aptos move compile",
+    "move:test": "cd contract && aptos move test",
+    "move:publish": "cd contract && aptos move publish",
+    "deploy:staging": "npm run build && firebase deploy --only hosting",
+    "deploy:production": "npm run build && firebase deploy --only hosting --project production",
+    "mobile:dev": "cd mobile && expo start",
+    "mobile:web": "cd mobile && expo start --web",
+    "mobile:android": "cd mobile && expo start --android",
+    "mobile:ios": "cd mobile && expo start --ios"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-org/aptofi.git"
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^5.1.0",
+    "@aptos-labs/wallet-adapter-ant-design": "^5.2.0",
+    "@aptos-labs/wallet-adapter-mui-design": "^5.1.0",
+    "@aptos-labs/wallet-adapter-react": "^7.1.0",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@tanstack/react-query": "^5.90.2",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "15.1.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "15.1.3",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "postcss": "^8.5.1",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.17",
+    "ts-jest": "^29.4.4",
+    "typescript": "^5.7.2"
   },
   "keywords": [
-    "aptos",
     "defi",
+    "banking",
     "blockchain",
-    "chainlink",
-    "ccip",
-    "lending",
-    "yield-farming",
-    "amm",
-    "mobile",
-    "react-native"
+    "aptos",
+    "nextjs",
+    "react",
+    "typescript",
+    "multi-platform"
   ],
-  "author": "AptoFi Team",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "^20.5.0",
-    "eslint": "^8.47.0",
-    "prettier": "^3.0.2"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
-  },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/aptofi"
+  "author": "AptoFi Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aptofi/aptofi.git"
   },
   "bugs": {
-    "url": "https://github.com/your-org/aptofi/issues"
+    "url": "https://github.com/aptofi/aptofi/issues"
   },
   "homepage": "https://aptofi.com"
 }

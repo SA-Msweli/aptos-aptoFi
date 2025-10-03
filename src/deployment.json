@@ -1,0 +1,27 @@
+{
+  "network": "testnet",
+  "nodeUrl": "https://fullnode.testnet.aptoslabs.com/v1",
+  "deployerAddress": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377",
+  "timestamp": "2025-01-03T15:49:45Z",
+  "version": "2.0.0-production",
+  "deployment_type": "fresh_address",
+  "old_address": "927e781adeb2252f56f4b7f9de423bda7402954ee7adb3baa1d766509d494f3c",
+  "contracts": {
+    "did_registry": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::did_registry",
+    "kyc_did_registry": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::kyc_did_registry",
+    "chainlink_oracle": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::chainlink_oracle",
+    "reputation_system": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::reputation_system",
+    "risk_manager": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::risk_manager",
+    "amm": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::amm",
+    "yield_vault": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::yield_vault",
+    "lending_protocol": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::lending_protocol",
+    "ccip_bridge": "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377::ccip_bridge"
+  },
+  "features": {
+    "production_ready": true,
+    "real_coin_handling": true,
+    "kyc_integration": true,
+    "resource_accounts": true,
+    "aptos_best_practices": true
+  }
+}

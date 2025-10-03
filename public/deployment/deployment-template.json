@@ -1,0 +1,17 @@
+{
+  "network": "testnet",
+  "nodeUrl": "https://fullnode.testnet.aptoslabs.com/v1",
+  "deployerAddress": "YOUR_NEW_DEPLOYER_ADDRESS_HERE",
+  "timestamp": "DEPLOYMENT_TIMESTAMP_HERE",
+  "contracts": {
+    "did_registry": "YOUR_ADDRESS::did_registry",
+    "kyc_did_registry": "YOUR_ADDRESS::kyc_did_registry",
+    "chainlink_oracle": "YOUR_ADDRESS::chainlink_oracle",
+    "reputation_system": "YOUR_ADDRESS::reputation_system",
+    "risk_manager": "YOUR_ADDRESS::risk_manager",
+    "amm": "YOUR_ADDRESS::amm",
+    "yield_vault": "YOUR_ADDRESS::yield_vault",
+    "lending_protocol": "YOUR_ADDRESS::lending_protocol",
+    "ccip_bridge": "YOUR_ADDRESS::ccip_bridge"
+  }
+}

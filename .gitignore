@@ -1,80 +1,263 @@
-# Dependencies
+# =============================================================================
+# AptoFi DeFi Banking App - .gitignore
+# =============================================================================
+
+# Node.js Dependencies
+# =============================================================================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# Package Managers
+# =============================================================================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm-debug.log*
 
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-
-# Logs
-logs
-*.log
-
-# Environment variables
+# Environment Variables (NEVER COMMIT THESE!)
+# =============================================================================
 .env
+.env.*
+!.env.example
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Editor directories and files
+# Logs
+# =============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime Data
+# =============================================================================
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Next.js Build Output
+# =============================================================================
+.next/
+out/
+build/
+dist/
+.vercel
+
+# TypeScript
+# =============================================================================
+*.tsbuildinfo
+next-env.d.ts
+.tscache/
+
+# React/Next.js Cache
+# =============================================================================
+.cache/
+.parcel-cache/
+
+# Testing
+# =============================================================================
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+test-results.xml
+*.lcov
+.jest/
+
+# Aptos Blockchain Specific (CRITICAL - NEVER COMMIT PRIVATE KEYS!)
+# =============================================================================
+.aptos/
+.movement/
+build/
+contract/build/
+move/build/
+contracts/build/
+*.mv
+
+# Wallet and Private Keys (NEVER COMMIT THESE!)
+# =============================================================================
+*.pem
+*.key
+*.p12
+*.keystore
+secrets.json
+private-keys.json
+wallet-config.json
+mnemonic.txt
+*.mobileprovision
+
+# Database Files
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.backup
+
+# Editor Directories and Files
+# =============================================================================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.sublime-project
+*.sublime-workspace
 
-# OS generated files
+# OS Generated Files
+# =============================================================================
+# macOS
 .DS_Store
 .DS_Store?
 ._*
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
+.TemporaryItems
 .Trashes
-ehthumbs.db
-Thumbs.db
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+.apdisk
 
-# Build outputs
-dist/
-build/
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Temporary Files
+# =============================================================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Optional Caches
+# =============================================================================
+.npm
+.eslintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Output of 'npm pack'
+# =============================================================================
 *.tgz
 *.tar.gz
 
-# TypeScript
-*.tsbuildinfo
+# Yarn Integrity File
+# =============================================================================
+.yarn-integrity
 
-# Mobile specific
-mobile/android/app/build/
-mobile/ios/build/
-mobile/.expo/
-mobile/web-build/
+# Storybook Build
+# =============================================================================
+storybook-static
 
-# Aptos
-.aptos/
-build/
-*.mv
+# PWA Files
+# =============================================================================
+sw.js
+workbox-*.js
 
-# Database
-*.db
-*.sqlite
+# Bundle Analyzer
+# =============================================================================
+.bundle-analyzer/
 
-# Testing
-coverage/
-.nyc_output/
+# Firebase (if using)
+# =============================================================================
+.firebase/
+firebase-debug.log
 
-# Cache
-.cache/
-*.tmp
-*.temp
+# DeFi Specific Artifacts
+# =============================================================================
+abi/
+typechain/
+typechain-types/
+artifacts/
+cache/
 
-# Secrets
-*.pem
-*.key
-secrets.json
+# Generated Files
+# =============================================================================
+src/types/generated/
+src/contracts/generated/
+
+# Mobile Development (React Native/Expo)
+# =============================================================================
+.expo/
+web-build/
+ios/
+android/
+.metro-health-check*
+
+# Archives and Large Files
+# =============================================================================
+*.zip
+*.7z
+*.rar
+*.mp4
+*.mov
+*.avi
+
+# Python (if any Python scripts)
+# =============================================================================
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.Python
+.pytest_cache/
+
+# IDE Specific
+# =============================================================================
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+*.code-workspace
+
+# Security and Audit Files
+# =============================================================================
+security-audit.log
+audit-report.*
+
+# Development Tools
+# =============================================================================
+.swc/
+.kiro/
+
+# Deployment & Production
+# =============================================================================
+deployment-info.json
+*.deployment
+.azure/
+
+# Additional TypeScript/Build files
+# =============================================================================
+tsconfig.tsbuildinfo
+
+# Additional Backup Files
+# =============================================================================
+*.backup
+*.backup2
+.gitignore.backup*
+
+# Miscellaneous
+# =============================================================================
+*.class
+*.lock
+.husky/_/

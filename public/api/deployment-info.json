@@ -1,0 +1,7 @@
+{
+  "network": "testnet",
+  "nodeUrl": "https://fullnode.testnet.aptoslabs.com/v1",
+  "timestamp": "2025-10-03T14:33:08.174Z",
+  "version": "1.0.0",
+  "buildId": "local"
+}
