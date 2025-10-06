@@ -5,7 +5,9 @@ name = "AptoFi"
 version = "1.0.0"
 
 [addresses]
-aptofi = "0x90b34a9b1c27e9f299a004f1878bc6ccef137ff6542790876c04f6a95db9e377"
+stake_pool_addr = "0xc367c4aefe1bc6028e0a5981c63c85347fcde2547f487904addc6762f8b130de"
+initial_reward_creator_addr = "0xc367c4aefe1bc6028e0a5981c63c85347fcde2547f487904addc6762f8b130de"
+fa_obj_addr = "0xa"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"

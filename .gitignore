@@ -1,5 +1,5 @@
 # =============================================================================
-# AptoFi DeFi Banking App - .gitignore
+# Optimus DeFi Banking App - .gitignore
 # =============================================================================
 
 # Node.js Dependencies
@@ -196,6 +196,9 @@ cache/
 # =============================================================================
 src/types/generated/
 src/contracts/generated/
+frontend/types/generated/
+frontend/contracts/generated/
+generated/
 
 # Mobile Development (React Native/Expo)
 # =============================================================================
@@ -238,7 +241,7 @@ audit-report.*
 # Development Tools
 # =============================================================================
 .swc/
-.kiro/
+# Note: .kiro/ contains specs and should be committed for project documentation
 
 # Deployment & Production
 # =============================================================================
@@ -255,9 +258,45 @@ tsconfig.tsbuildinfo
 *.backup
 *.backup2
 .gitignore.backup*
+*.bak
+*~
+
+# Vite Specific
+# =============================================================================
+vite.config.ts.timestamp-*
+vite.config.js.timestamp-*
+
+# Hyperion SDK Cache
+# =============================================================================
+.hyperion-cache/
+hyperion-*.log
+
+# Nodit API Cache
+# =============================================================================
+.nodit-cache/
+nodit-*.log
+
+# Test Files (temporary)
+# =============================================================================
+test-*.js
+test-*.ts
+*-test.js
+*-test.ts
+test-output/
+test-results/
+
+# Temporary Documentation
+# =============================================================================
+*.md.backup
+*.md.tmp
+TEMP_*.md
 
 # Miscellaneous
 # =============================================================================
 *.class
 *.lock
 .husky/_/
+.turbo/
+.rush/
+hackathon
+.kiro

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "out",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,52 +8,9 @@
     ],
     "rewrites": [
       {
-        "source": "/api/deployment-info",
-        "destination": "/api/deployment-info.json"
-      },
-      {
-        "source": "/deployment/**",
-        "destination": "/deployment/**"
+        "source": "**",
+        "destination": "/index.html"
       }
-    ],
-    "headers": [
-      {
-        "source": "/deployment/**",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "public, max-age=300"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ]
-      },
-      {
-        "source": "/api/**",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "public, max-age=60"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ]
-      },
-      {
-        "source": "**/*.json",
-        "headers": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ]
-      }
-    ],
-    "cleanUrls": true,
-    "trailingSlash": false
+    ]
   }
 }
